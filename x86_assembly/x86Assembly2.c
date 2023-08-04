@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+unsigned int array[16] = {0x72, 0x33, 0x34, 0x64, 0x79, 0x20, 0x37, 0x30,
+                          0x20, 0x64, 0x33, 0x62, 0x75, 0x36, 0x3f, 0x00};
+
+int main(void)
+{
+    for (int i = 0; i < 16; i++) {
+        printf("%c", array[i]);
+    }
+    puts("");
+
+    return 0;
+}
