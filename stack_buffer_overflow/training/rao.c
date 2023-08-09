@@ -1,15 +1,15 @@
-// Compile: gcc -o rao rao.c -fno-stack-protecotr -no-pie
+// Compile: gcc -o rao rao.c -fno-stack-protector -no-pie
 
 #include <stdio.h>
 #include <unistd.h>
 
-void init(void)
+void init() 
 {
 	setvbuf(stdin, 0, 2, 0);
 	setvbuf(stdout, 0, 2, 0);
 }
 
-void get_shell(void)
+void get_shell() 
 {
 	char *cmd = "/bin/sh";
 	char *args[] = {cmd, NULL};
